@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="base" template="/WEB-INF/jsp/layouts/base.jsp">
+    </definition>
+    <definition name="main" template="/WEB-INF/jsp/layouts/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+    </definition>
+    <definition name="main_idr" template="/WEB-INF/jsp/layouts/layout_idr.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+    </definition>
+    <definition name="adminMain" template="/WEB-INF/jsp/layouts/admin/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+        <put-attribute name="left" value="/WEB-INF/jsp/layouts/admin/aside.jsp" />
+        <!--		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />-->
+    </definition>
+    <definition name="adminMainIdr" template="/WEB-INF/jsp/layouts/admin/idr_layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+        <put-attribute name="left" value="/WEB-INF/jsp/layouts/admin/idr_aside.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+    </definition>
+    <definition name="mobile" template="/WEB-INF/jsp/mobile/layouts/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/mobile/layouts/header.jsp" />
+        <put-attribute name="header-tree" value="/WEB-INF/jsp/mobile/layouts/header-tree.jsp" />
+        <put-attribute name="right" value="/WEB-INF/jsp/mobile/layouts/right.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/mobile/layouts/footer.jsp" />
+    </definition>
+    <definition name="mobileIdr" template="/WEB-INF/jsp/mobile/layouts/layoutIdr.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/mobile/layouts/header.jsp" />
+        <put-attribute name="header-tree" value="/WEB-INF/jsp/mobile/layouts/header-tree.jsp" />
+        <put-attribute name="right" value="/WEB-INF/jsp/mobile/layouts/right.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/mobile/layouts/footer.jsp" />
+    </definition>
+
+    <definition name="/admin/*/*" extends="adminMain">
+        <put-attribute name="content" value="/WEB-INF/jsp/client/{1}/admin/{2}.jsp" />
+    </definition>
+
+    <definition name="/admin/*/*/*" extends="adminMain">
+        <put-attribute name="content" value="/WEB-INF/jsp/client/{1}/admin/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="/mobile/*/*" extends="mobile">
+        <put-attribute name="content" value="/WEB-INF/jsp/mobile/{1}/{2}.jsp" />
+    </definition>
+
+    <definition name="/mobile/*/*/*" extends="mobile">
+        <put-attribute name="content" value="/WEB-INF/jsp/mobile/{1}/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="/mobile/client/*/*/*" extends="mobile">
+        <put-attribute name="content" value="/WEB-INF/jsp/mobile/client/{1}/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="/*/*" extends="main">
+        <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+    </definition>
+
+    <definition name="/*/*/*" extends="main">
+        <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="/client/*/popup/*" extends="base">
+        <put-attribute name="content" value="/WEB-INF/jsp/client/{1}/popup/{2}.jsp" />
+    </definition>
+
+    <definition name="/client/*/*/*" extends="main">
+        <put-attribute name="content" value="/WEB-INF/jsp/client/{1}/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="jsp-/*/*/*/*" extends="base">
+        <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+
+    <definition name="jsp-/*/*/*" extends="base">
+        <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
+    </definition>
+
+    <definition name="jsp-/*/*" extends="base">
+        <put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+    </definition>
+
+
+</tiles-definitions>
