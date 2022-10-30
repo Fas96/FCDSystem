@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/google.maps": "^3.50.4",
+    "faker": "^6.6.6"
+  }
+}
