@@ -7,8 +7,8 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath }"></c:set>
 <c:set var="lang">${empty param.lang ? cookie.clientlanguage.value : param.lang }</c:set>
 <%
-	pageContext.setAttribute("cr", "\r");		// Space
-	pageContext.setAttribute("cn", "\n");		// Enter
-	pageContext.setAttribute("crcn", "\r\n");	// SpaceEnter
-	pageContext.setAttribute("br", "<br>");		// br 태그
+	pageContext.setAttribute("cr", "\r");
+	pageContext.setAttribute("cn", "\n");
+	pageContext.setAttribute("crcn", "\r\n");
+	pageContext.setAttribute("br", "<br>");
 %>
