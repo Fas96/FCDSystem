@@ -18,14 +18,13 @@ public class ListFolderContentApi {
     static final Logger LOGGER = LoggerFactory.getLogger(ListFolderContentApi.class);
 
     SitesApi sitesApi;
-    site
+
 
 
    private final NodesApi nodesApi;
 
     public ListFolderContentApi(NodesApi nodesApi) {
         this.nodesApi = nodesApi;
-        sitesApi.listSites("swsdp");
     }
 
 
