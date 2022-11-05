@@ -22,7 +22,7 @@ public class LoginController {
             param.put("failCount", 0);
             mv.addObject("user", param);
         }
-        mv.setViewName("login");
+        mv.setViewName("home");
         return mv;
     }
 

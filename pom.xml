@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+       <relativePath/>
     </parent>
     <groupId>com.fas</groupId>
     <artifactId>FCDSystem</artifactId>
@@ -14,18 +14,20 @@
     <name>FCDSystem</name>
     <description>FCDSystem</description>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
+
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <spring-boot.version>2.7.5</spring-boot.version>
     </properties>
-
-
-    <packaging>war</packaging>
-
-
-
+    <packaging>jar</packaging>
     <repositories>
         <repository>
             <id>alfresco-public</id>
-            <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+             <url>
+                https://artifacts.alfresco.com/nexus/content/groups/public
+             </url>
         </repository>
 
 
@@ -35,6 +37,7 @@
             <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,6 +54,16 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>3.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.mobile</groupId>
+            <artifactId>spring-mobile-device</artifactId>
+            <version>2.0.0.M3</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -82,11 +95,7 @@
             <version>2.3.3</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.mobile</groupId>
-            <artifactId>spring-mobile-device</artifactId>
-            <version>2.0.0.M3</version>
-        </dependency>
+
 
 
 <!--        "Path with "WEB-INF" or "META-INF": [WEB-INF/jsp/error.jsp]"-->
@@ -94,6 +103,27 @@
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.alfresco</groupId>
+            <artifactId>alfresco-java-rest-api-spring-boot-starter</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.alfresco</groupId>-->
+<!--            <artifactId>alfresco-java-event-api-spring-boot-starter</artifactId>-->
+<!--            <version>5.1.0</version>-->
+<!--        </dependency>-->
+        <!-- required for LinkedTreeMap -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -113,4 +143,7 @@
         </plugins>
     </build>
 
+
+
 </project>
+

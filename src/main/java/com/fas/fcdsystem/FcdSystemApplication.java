@@ -6,8 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class FcdSystemApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(FcdSystemApplication.class, args);
+
     }
 
 }
