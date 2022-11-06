@@ -1,5 +1,6 @@
 import fs from 'fs';
 import {CsvFileReader} from "@/stats/CsvFileReader";
+import {MatchResult} from "@/stats/MatchResult";
 
 let matchContent =  new CsvFileReader('docs/football.csv');
 matchContent.read();
@@ -7,11 +8,7 @@ matchContent.read();
 let matches:string[][]   = matchContent.data as string[][];
 
 let manUnitedWins = 0;
-enum MatchResult {
-    HomeWin = 'H',
-    AwayWin = 'A',
-    Draw = 'D'
-}
+
 
 for (let match of matches) {
 
