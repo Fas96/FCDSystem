@@ -2,11 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+<!--    <parent>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>2.7.5</version>-->
+<!--       <relativePath/>-->
+<!--    </parent>-->
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.5</version>
-       <relativePath/>
+        <groupId>org.alfresco</groupId>
+        <artifactId>alfresco-java-sdk</artifactId>
+        <version>5.1.0</version>
     </parent>
     <groupId>com.fas</groupId>
     <artifactId>FCDSystem</artifactId>
@@ -40,6 +45,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.alfresco</groupId>
+            <artifactId>alfresco-java-event-api-spring-boot-starter</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.alfresco</groupId>
+            <artifactId>alfresco-java-rest-api-spring-boot-starter</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -65,11 +80,7 @@
             <artifactId>spring-mobile-device</artifactId>
             <version>2.0.0.M3</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.tiles</groupId>
             <artifactId>tiles-jsp</artifactId>
@@ -103,21 +114,12 @@
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.alfresco</groupId>
-            <artifactId>alfresco-java-rest-api-spring-boot-starter</artifactId>
-            <version>5.1.0</version>
-        </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.alfresco</groupId>-->
-<!--            <artifactId>alfresco-java-event-api-spring-boot-starter</artifactId>-->
-<!--            <version>5.1.0</version>-->
-<!--        </dependency>-->
-        <!-- required for LinkedTreeMap -->
+
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>

@@ -25,7 +25,7 @@ public class FileFoldersController {
     }
     @GetMapping("/folders")
     public String getFoldersList() throws IOException {
-        listFolderContentApi.listFolderContent("user/home", "/nodes/user/home/children");
+        listFolderContentApi.listFolderContent("user/home", null);
         return "layout/home/index";
     }
 

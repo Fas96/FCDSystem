@@ -52,7 +52,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5",
-    "styled-reset": "^4.4.2"
+    "styled-reset": "^4.4.2",
+    "@types/node": "12.20.55"
 
   },
   "devDependencies": {
