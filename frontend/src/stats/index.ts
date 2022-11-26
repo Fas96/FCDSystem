@@ -1,8 +1,9 @@
 import fs from 'fs';
 import {CsvFileReader} from "@/stats/CsvFileReader";
 import {MatchResult} from "@/stats/MatchResult";
+import {MatchCsvFileReader} from "@/stats/MatchCsvFileReader";
 
-let matchContent =  new CsvFileReader('docs/football.csv');
+let matchContent =  new MatchCsvFileReader('docs/football.csv');
 matchContent.read();
 
 let matches:string[][]   = matchContent.data as string[][];
