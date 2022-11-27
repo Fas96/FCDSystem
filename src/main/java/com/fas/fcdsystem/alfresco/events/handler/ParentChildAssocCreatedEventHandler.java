@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class ParentChildAssocCreatedEventHandler implements OnChildAssocCreatedEventHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(ParentChildAssocCreatedEventHandler.class);
     public void handleEvent(final RepoEvent<DataAttributes<Resource>> repoEvent) {

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-@Component
+//@Component
 public class ContentUpdatedEventHandler implements OnNodeUpdatedEventHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(ContentUpdatedEventHandler.class);
 

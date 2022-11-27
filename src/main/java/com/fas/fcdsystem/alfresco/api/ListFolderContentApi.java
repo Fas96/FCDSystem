@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-@Component("listFolderContentApi")
+//@Component("listFolderContentApi")
 public class ListFolderContentApi {
     static final Logger LOGGER = LoggerFactory.getLogger(ListFolderContentApi.class);
 

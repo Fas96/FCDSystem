@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 
-@Controller
+//@Controller
 public class FileFoldersController {
     private static final Logger LOGGER = (Logger) org.slf4j.LoggerFactory.getLogger(FileFoldersController.class);
     private final ListFolderContentApi listFolderContentApi;

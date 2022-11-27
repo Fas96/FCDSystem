@@ -34,11 +34,12 @@ import javax.jms.Topic;
 import java.util.ArrayList;
 import java.util.List;
 
-@Configuration
-@AutoConfigureAfter({ IntegrationAutoConfiguration.class, ActiveMQAutoConfiguration.class, JmsAutoConfiguration.class })
-@ConditionalOnClass(RepoEvent.class)
-@EnableConfigurationProperties(AlfrescoEventsProperties.class)
+//@Configuration
+//@AutoConfigureAfter({ IntegrationAutoConfiguration.class, ActiveMQAutoConfiguration.class, JmsAutoConfiguration.class })
+//@ConditionalOnClass(RepoEvent.class)
+//@EnableConfigurationProperties(AlfrescoEventsProperties.class)
 public class AlfrescoEventsAutoConfiguration {
+    /*
 
     @Autowired(required = false)
     private final List<EventHandler> eventHandlers = new ArrayList<>();
@@ -105,4 +106,6 @@ public class AlfrescoEventsAutoConfiguration {
     public EventHandlingRegistry eventHandlingRegistry() {
         return new EventHandlingRegistry(eventHandlers);
     }
+
+    */
 }

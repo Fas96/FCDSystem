@@ -19,7 +19,7 @@ package com.fas.fcdsystem.alfresco.events.handler;
 /**
  * Spring Integration based event handler that will execute code when a file is uploaded
  */
-@Component
+//@Component
 public class NewContentFlowEventHandler extends IntegrationFlowAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(NewContentFlowEventHandler.class);
 
