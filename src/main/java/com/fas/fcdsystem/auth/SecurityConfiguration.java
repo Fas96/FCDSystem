@@ -51,6 +51,11 @@ public class SecurityConfiguration{
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
+                .antMatchers(
+                        "/h2-console/**"    // 여기!
+                ).permitAll()
+                .and()
+                .authorizeRequests()
                 .antMatchers("/js/**", "/css/**")
                 .permitAll()
                 .antMatchers("/api/**")
