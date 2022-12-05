@@ -55,9 +55,25 @@ class BehaviorVerificationBookServiceTest {
 
     @Test
     public void testUpdatePrice() {
-        bookService.updatePrice(null, 600);
+        Book book = new Book(null, "Mockito In Action", 500, LocalDate.now());
 
+        doReturn(book).when(bookRepository).findBookById("1234");
+        bookService.updatePrice("1234", 600);
+        verify(bookRepository).save(book);
+    }
+    @Test
+    public void testUpdatePriceNoInteraction() {
+       bookService.updatePrice(null, 600);
         verifyNoInteractions(bookRepository);
+    }
+    @Test
+    public void testUpdatePriceNoInteractionWithSave() {
+        Book book = new Book("1234", "Mockito In Action", 500, LocalDate.now());
+         when(bookRepository.findBookById("1234")).thenReturn(book);
+        bookService.updatePrice("1234", 500);
+        verify(bookRepository).findBookById("1234");
+        verifyNoMoreInteractions(bookRepository);
+        verify(bookRepository, never()).save(book);
     }
 
     @Test
@@ -66,7 +82,8 @@ class BehaviorVerificationBookServiceTest {
         when(bookRepository.findBookById("1234")).thenReturn(book);
         bookService.updatePrice("1234", 500);
         verify(bookRepository).findBookById("1234");
-        verify(bookRepository).save(book);
+        //we can add this verification if we did not check for the current price with updated price
+//        verify(bookRepository).save(book);
         verifyNoMoreInteractions(bookRepository);
     }
 
