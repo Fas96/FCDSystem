@@ -1,5 +1,5 @@
 package com.fas.fcdsystem.mockito.test_doubles.spy;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 public class BookRepositorySpy implements BookRepository {
 	
 	int saveCalled = 0;

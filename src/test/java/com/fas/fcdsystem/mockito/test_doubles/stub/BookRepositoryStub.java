@@ -3,7 +3,7 @@ package com.fas.fcdsystem.mockito.test_doubles.stub;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 public class BookRepositoryStub implements BookRepository {
 	@Override
 	public List<Book> findNewBooks(int days) {

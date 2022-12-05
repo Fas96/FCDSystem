@@ -10,7 +10,7 @@ import java.util.Collection;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 class BookServiceTest {
     @Test
     public void testFake(){

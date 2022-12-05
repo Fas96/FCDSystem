@@ -1,7 +1,7 @@
 package com.fas.fcdsystem.mockito.test_doubles.stub;
 
 import java.util.List;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 public class BookService {
 	
 	private BookRepository bookRepository;

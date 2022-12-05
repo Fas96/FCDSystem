@@ -1,4 +1,4 @@
-package com.fas.fcdsystem.mockito.spies;
+package com.fas.fcdsystem.mockito.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,11 +14,10 @@ public class Book {
 	private String title;
 	private int price;
 	private LocalDate publishedDate;
-	
 
-	
 	@Override
 	public boolean equals(Object o) {
+		
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Book book = (Book) o;

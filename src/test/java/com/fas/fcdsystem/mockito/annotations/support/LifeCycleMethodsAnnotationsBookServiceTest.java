@@ -1,5 +1,6 @@
 package com.fas.fcdsystem.mockito.annotations.support;
 
+import com.fas.fcdsystem.mockito.common.model.Book;
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

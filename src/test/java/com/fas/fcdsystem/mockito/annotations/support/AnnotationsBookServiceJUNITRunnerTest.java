@@ -1,5 +1,5 @@
 package com.fas.fcdsystem.mockito.annotations.support;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

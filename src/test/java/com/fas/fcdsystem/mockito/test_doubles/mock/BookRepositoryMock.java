@@ -1,7 +1,7 @@
 package com.fas.fcdsystem.mockito.test_doubles.mock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 public class BookRepositoryMock implements BookRepository {
 	
 	int saveCalled = 0;

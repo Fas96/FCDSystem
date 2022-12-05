@@ -1,5 +1,7 @@
 package com.fas.fcdsystem.mockito.behavior.verification;
 
+import com.fas.fcdsystem.mockito.common.model.Book;
+
 public class BookService {
 	
 	private BookRepository bookRepository;
@@ -31,9 +33,9 @@ public class BookService {
 			return;
 		}
 		Book book = bookRepository.findBookById(bookId);
-		if(book.getPrice()==updatedPrice){
-			return;
-		}
+//		if(book.getPrice()==updatedPrice){
+//			return;
+//		}
 		book.setPrice(updatedPrice);
 		bookRepository.save(book);
 	}

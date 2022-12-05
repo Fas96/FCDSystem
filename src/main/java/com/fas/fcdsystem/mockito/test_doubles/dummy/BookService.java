@@ -1,5 +1,5 @@
 package com.fas.fcdsystem.mockito.test_doubles.dummy;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 public class BookService {
 	
 	private BookRepository bookRepository;

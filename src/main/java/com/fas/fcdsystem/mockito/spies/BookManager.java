@@ -1,6 +1,6 @@
 package com.fas.fcdsystem.mockito.spies;
 
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 public class BookManager {
 	
 	private BookService bookService;

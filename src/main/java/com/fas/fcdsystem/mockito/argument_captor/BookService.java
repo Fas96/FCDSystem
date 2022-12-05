@@ -1,5 +1,7 @@
 package com.fas.fcdsystem.mockito.argument_captor;
 
+import com.fas.fcdsystem.mockito.common.model.Book;
+
 public class BookService {
 	
 	private BookRepository bookRepository;

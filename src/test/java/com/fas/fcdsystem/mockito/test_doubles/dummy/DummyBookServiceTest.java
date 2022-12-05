@@ -2,7 +2,7 @@ package com.fas.fcdsystem.mockito.test_doubles.dummy;
 
 import com.fas.fcdsystem.mockito.test_doubles.common.FakeBookRepository;
 import org.junit.jupiter.api.Test;
-
+import com.fas.fcdsystem.mockito.common.model.Book;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;

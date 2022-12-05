@@ -105,9 +105,9 @@ class BehaviorVerificationBookServiceTest {
         bookService.addBook(bookRequest);
         bookService.addBook(bookRequest);
         bookService.addBook(bookRequest);
-//		verify(bookRepository, times(2)).save(book);
-//		verify(bookRepository, atLeast(4)).save(book);
-//		verify(bookRepository, atMost(2)).save(book);
+		verify(bookRepository, times(3)).save(book);
+		verify(bookRepository, atLeast(2)).save(book);
+		verify(bookRepository, atMost(3)).save(book);
 //		verify(bookRepository, atMostOnce()).save(book);
         verify(bookRepository, atLeastOnce()).save(book);
     }
