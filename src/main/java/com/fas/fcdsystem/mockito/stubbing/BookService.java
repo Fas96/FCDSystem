@@ -1,6 +1,5 @@
 package com.fas.fcdsystem.mockito.stubbing;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BookService {
@@ -13,8 +12,7 @@ public class BookService {
 	
 	public List<Book> getNewBooksWithAppliedDiscount(int discountRate, int days){
 		List<Book> newBooks = bookRepository.findNewBooks(days);
-		// 500 apply 10% -> 10% of 500 -> 50 -> 500 - 50 -> 450
-		
+
 		for(Book book : newBooks){
 			int price = book.getPrice();
 			int newPrice = price - (discountRate * price / 100);
@@ -26,9 +24,10 @@ public class BookService {
 	
 	public int calculateTotalCost(List<String> bookIds) {
 		int total = 0;
+
 		for(String bookId : bookIds){
 			Book book = bookRepository.findBookByBookId(bookId);
-			total = total + book.getPrice();
+			total +=  book.getPrice();
 		}
 		return total;
 	}
