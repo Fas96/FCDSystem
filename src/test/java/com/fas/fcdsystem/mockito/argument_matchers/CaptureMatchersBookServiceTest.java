@@ -39,7 +39,9 @@ class CaptureMatchersBookServiceTest {
     public void testInvalidUseOfArgumentMatchers() {
         Book book = new Book("1234", "Mockito In Action", 600, LocalDate.now());
         when(bookRepository.findBookByTitleAndPublishedDate(eq("Mockito In Action"), any())).thenReturn(book);
+
         Book actualBook = bookService.getBookByTitleAndPublishedDate(eq("Mockito In Action"), any());
+
         assertEquals("Mockito In Action", actualBook.getTitle());
     }
 
@@ -64,6 +66,7 @@ class CaptureMatchersBookServiceTest {
     public void testStringTypeArgumentMatchers() {
         Book book = new Book("1234", "Mockito In Action", 600, LocalDate.now());
         when(bookRepository.findBookByTitleAndPriceAndIsDigital(contains("Action"), anyInt(), anyBoolean())).thenReturn(book);
+        //starts with , ends with, matches, matches regex, contains, containsIgnoringCase, containsPattern
         Book actualBook = bookService.getBookByTitleAndPriceAndIsDigital("JUnit 5 In Action", 600, true);
         assertEquals("Mockito In Action", actualBook.getTitle());
     }
